@@ -3,12 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Activitesequencetype
  *
  * @ORM\Table(name="activitesequencetheorique")
  * @ORM\Entity
+ * @ApiResource
  */
 class Activitesequencetheorique
 {

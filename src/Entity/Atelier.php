@@ -5,12 +5,15 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Atelier
  *
  * @ORM\Table(name="atelier")
  * @ORM\Entity
+ * @ApiResource
  */
 class Atelier
 {
@@ -20,6 +23,7 @@ class Atelier
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @Groups("atelier:read")
      */
     private $id;
 
@@ -27,6 +31,7 @@ class Atelier
      * @var string
      *
      * @ORM\Column(name="titre", type="text", length=65535, nullable=false)
+     * * @Groups("atelier:read")
      */
     private $titre;
 
@@ -34,6 +39,7 @@ class Atelier
      * @var string
      *
      * @ORM\Column(name="image", type="text", length=65535, nullable=false)
+     * * @Groups("atelier:read")
      */
     private $image;
 
@@ -41,6 +47,7 @@ class Atelier
      * @var string
      *
      * @ORM\Column(name="uniteDePerformance", type="text", length=65535, nullable=false)
+     * * @Groups("atelier:read")
      */
     private $unitedeperformance;
 
@@ -48,6 +55,7 @@ class Atelier
      * @var string
      *
      * @ORM\Column(name="uniteDIntensite", type="text", length=65535, nullable=false)
+     * * @Groups("atelier:read")
      */
     private $unitedintensite;
 
@@ -55,6 +63,7 @@ class Atelier
      * @var string
      *
      * @ORM\Column(name="description", type="text", length=65535, nullable=false)
+     * * @Groups("atelier:read")
      */
     private $description;
 
@@ -62,6 +71,7 @@ class Atelier
      * @var string
      *
      * @ORM\Column(name="resume", type="text", length=65535, nullable=false)
+     * * @Groups("atelier:read")
      */
     private $resume;
 

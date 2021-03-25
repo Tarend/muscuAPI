@@ -5,12 +5,13 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-
+use ApiPlatform\Core\Annotation\ApiResource;
 /**
  * Sequencetheorique
  *
  * @ORM\Table(name="sequencetheorique")
  * @ORM\Entity
+ * @ApiResource
  */
 class Sequencetheorique
 {

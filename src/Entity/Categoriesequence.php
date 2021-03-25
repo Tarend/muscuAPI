@@ -5,12 +5,14 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Categoriesequence
  *
  * @ORM\Table(name="categoriesequence")
  * @ORM\Entity
+ * @ApiResource
  */
 class Categoriesequence
 {

@@ -3,10 +3,11 @@
 namespace App\Entity;
 
 use App\Repository\CommentaireAtelierRepository;
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping as ORM;use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * @ORM\Entity(repositoryClass=CommentaireAtelierRepository::class)
+ * @ApiResource
  */
 class CommentaireAtelier
 {
