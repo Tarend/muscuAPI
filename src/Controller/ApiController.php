@@ -2,7 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Atelier;
 use App\Entity\Post;
+use App\Form\AtelierType;
+use App\Repository\CommentaireAtelierRepository;
 use App\Repository\PostRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,12 +22,12 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 class ApiController extends AbstractController
 {
     /**
-     * @Route("/api/post", name="api_post_index", methods={"GET"})
+     * @Route("/api/commentaires_ateliers/ateliers/{id}", name="api_get_atelier", methods={"GET"})
      */
-    public function index(PostRepository $postRepository)
+    public function index(CommentaireAtelierRepository $atelierRepository)
     {
 
-        return $this->json($postRepository->findAll(),200,[],['groups'=>'post:read']);
+        return $this->json($atelierRepository->findBy(Atelier::class->id),200,[],['groups'=>'post:read']);
 
     }
 
