@@ -27,7 +27,7 @@ class ApiController extends AbstractController
     public function index(CommentaireAtelierRepository $atelierRepository)
     {
 
-        return $this->json($atelierRepository->findBy(Atelier::class->id),200,[],['groups'=>'post:read']);
+        return $this->json($atelierRepository->findBy(Atelier::class),200,[],['groups'=>'post:read']);
 
     }
 
