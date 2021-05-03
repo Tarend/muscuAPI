@@ -22,14 +22,14 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 class ApiController extends AbstractController
 {
     /**
-     * @Route("/api/commentaires_ateliers/ateliers/{id}", name="api_get_atelier", methods={"GET"})
+     * @Route("/api/commentaires_atelier/ateliers/{id}", name="commentaires_atelier", methods={"GET"})
      */
-    public function index(CommentaireAtelierRepository $atelierRepository)
+    public function commentaires_atelier(CommentaireAtelierRepository $commentaireAtelierRepository, $id)
     {
-
-        return $this->json($atelierRepository->findBy(Atelier::class),200,[],['groups'=>'post:read']);
-
+        return $response = $this->json($commentaireAtelierRepository->findBy(['atelier' => $id]), 200, []);
     }
+
+
 
 
 }
